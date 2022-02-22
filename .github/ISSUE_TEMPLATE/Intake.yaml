@@ -1,0 +1,70 @@
+name: DevOps Intake
+description: Intake form for DevOps
+title: "[Intake]: "
+labels: ["Intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the required information.
+  - type: input
+    id: requestor
+    attributes:
+      label: Requestor
+      description: we get in touch with you if we need more info
+      placeholder: ex. firstname.lastname@example.com
+    validations:
+      required: true
+  - type: textarea
+    id: businessjustification
+    attributes:
+      label: Business Justification
+      description: 
+      placeholder: Business justification for the intake to process
+      value: ""
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Intake to process for the environment
+      options:
+        - Demo
+        - Production
+        - Test
+        - UAT
+    validations:
+      required: true
+  - type: dropdown
+    id: customer
+    attributes:
+      label: Customer Type
+      multiple: true
+      options:
+        - New
+        - Existing
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      multiple: true
+      options:
+        - Azure Hosted
+        - OnPremise
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Approval attached
+      description: Check approval received from stakeholder is attached with the intake form.
+      options:
+        - label: Development
+          required: true
+        - label: Product Owner
+          required: true
+        - label: Security Team
+          required: true
+        - label: Environment Owner
+          required: true
+        - label: CMRE Team
+          required: true
