@@ -21,7 +21,6 @@ body:
       label: Business Justification
       description: 
       placeholder: Business justification for the intake to process
-      value: ""
     validations:
       required: true
   - type: dropdown
